@@ -1,0 +1,24 @@
+<div class="main">
+  <div class="flip-card" [ngClass]="{'active': flipActive}" (click)="flipCard()">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h1>40 consejos, 40 días para los 40</h1>
+        <img src="../../assets/PHOTO-2021-11-29-21-59-44.jpg">
+        <p>Dame mi consejo</p>
+      </div>
+      <div class="flip-card-back">
+        <img src="../../assets/PHOTO-2021-11-29-21-59-44.jpg">
+        <h1>Si lo puedes automatizar... automatízalo</h1>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="flipActive" class="memes">
+    <div>
+      <ion-button color="warning" (click)="getRandomMeme()">¡Venga una broma!</ion-button>
+    </div>
+    <div>
+      <img *ngIf="imageToShow" [src]="imageToShow">
+    </div>
+  </div>
+  
+</div>
